@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import React from "react";
 import BannerImage from "@/assets/banner.png";
 
@@ -24,12 +23,12 @@ const Banner = () => {
               into today&apos;s plan, and watch the week&apos;s work add up.
             </p>
 
-            <Link
+            <a
               href="#library"
               className="mt-4 inline-flex rounded-[3px] bg-[#CCFF00] px-3 py-1.5 text-[8px] font-bold uppercase text-black transition hover:bg-[#d9ff4d]"
             >
               Browse Workouts
-            </Link>
+            </a>
           </div>
 
           {/* Image */}
