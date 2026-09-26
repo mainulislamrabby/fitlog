@@ -4,7 +4,7 @@ import WorkoutCard from "../shared/WorkoutCard";
 
 const getFitLogData = async (): Promise<Workout[]> => {
   try {
-    const response = await fetch("https://api.abcz.workers.dev/api/fitlog");
+    const response = await fetch("https://api.api-store.workers.dev/api/fitlog");
 
     if (!response.ok) {
       throw new Error("Failed to fetch workouts");

@@ -15,7 +15,7 @@ interface WorkoutDetailsProps {
 const getFitLogData = async (id: string): Promise<Workout> => {
   try {
     const response = await fetch(
-      `https://api.abcz.workers.dev/api/fitlog/${id}`,
+      `https://api.api-store.workers.dev/api/fitlog/${id}`,
       {
         cache: "no-store",
       },
