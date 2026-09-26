@@ -78,16 +78,7 @@ Users can save workouts for later and access them from the **Saved** tab.
 
 Saved workouts can also be removed when they are no longer needed.
 
-### 5. Search Workouts
-
-Users can search workout entries by:
-
-- Workout name
-- Muscle group/category
-
-Search functionality is available for the workout library and My Plan entries.
-
-### 6. Sort Workouts
+### 5. Sort Workouts
 
 The My Plan list can be sorted using:
 
@@ -97,7 +88,7 @@ The My Plan list can be sorted using:
 
 The default sorting option is Duration.
 
-### 7. Workout Statistics
+### 6. Workout Statistics
 
 The My Plan page provides a live summary of:
 
@@ -107,11 +98,7 @@ The My Plan page provides a live summary of:
 
 The statistics update when workouts are added or removed.
 
-### 8. Persistent Data
-
-Today's Plan and Saved workouts are stored in **localStorage**, allowing the user's workout data to remain available after refreshing or reopening the page.
-
-### 9. Responsive Design
+### 7. Responsive Design
 
 FitLog is designed to work across:
 
@@ -121,7 +108,7 @@ FitLog is designed to work across:
 
 The layout, navigation, workout grid, hero section, and plan cards adapt to different screen sizes.
 
-### 10. Toast Notifications
+### 8. Toast Notifications
 
 Users receive toast notifications when performing important actions such as:
 
