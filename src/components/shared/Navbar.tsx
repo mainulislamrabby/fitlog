@@ -1,9 +1,12 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useContext } from "react";
 import Logo from "@/assets/logo.png";
+import { FitLogContext } from "@/context/FitLogContext";
 
 const Navbar = () => {
+  const {plan, saved} = useContext(FitLogContext);
   return (
     <header className="border-b border-white/10 bg-[#0B0D0F] text-white">
       <div className="navbar container mx-auto min-h-20 px-4">
@@ -95,7 +98,7 @@ const Navbar = () => {
             className="flex items-center gap-2 rounded-full bg-[#CCFF00] px-3 py-2 text-xs font-bold uppercase text-black"
           >
             <span>Plan</span>
-            <span>0</span>
+            <span>{plan.length}</span>
           </Link>
 
           {/* Saved */}
@@ -104,7 +107,7 @@ const Navbar = () => {
             className="flex items-center gap-2 rounded-full border border-white/30 px-3 py-2 text-xs font-bold uppercase text-white"
           >
             <span>Saved</span>
-            <span>0</span>
+            <span>{saved.length}</span>
           </Link>
         </div>
       </div>

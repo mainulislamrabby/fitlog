@@ -1,7 +1,9 @@
+import SavedButton from "@/components/actionButton/SavedButton";
+import AddPlanButton from "@/components/actionButton/AddPlanButton";
 import { Workout } from "@/types/workOutTypes";
 import Image from "next/image";
 import React from "react";
-import { BsBookmark, BsFire, BsPlus, BsStar } from "react-icons/bs";
+import { BsFire, BsStar } from "react-icons/bs";
 import { FaClock } from "react-icons/fa";
 
 interface WorkoutDetailsProps {
@@ -180,22 +182,10 @@ const WorkoutDetails = async ({ params }: WorkoutDetailsProps) => {
             {/* BUTTONS */}
             <div className="mt-6 flex flex-wrap gap-3">
               {/* ADD TO PLAN */}
-              <button
-                type="button"
-                className="flex items-center gap-2 rounded-md bg-[#ccff00] px-4 py-2.5 text-xs font-bold text-black transition hover:bg-[#ddff55]"
-              >
-                <BsPlus size={15} />
-                Add to today&apos;s plan
-              </button>
+              <AddPlanButton workout={workout} />
 
               {/* SAVE */}
-              <button
-                type="button"
-                className="flex items-center gap-2 rounded-md border border-[#30343d] px-4 py-2.5 text-xs font-medium text-gray-300 transition hover:border-[#ccff00] hover:text-white"
-              >
-                <BsBookmark size={12} />
-                Save for later
-              </button>
+              <SavedButton workout={workout} />
             </div>
           </div>
         </div>
