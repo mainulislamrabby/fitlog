@@ -4,9 +4,11 @@ import Link from "next/link";
 import React, { useContext } from "react";
 import Logo from "@/assets/logo.png";
 import { FitLogContext } from "@/context/FitLogContext";
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
-  const {plan, saved} = useContext(FitLogContext);
+  const { plan, saved } = useContext(FitLogContext);
+  const pathname = usePathname();
   return (
     <header className="border-b border-white/10 bg-[#0B0D0F] text-white">
       <div className="navbar container mx-auto min-h-20 px-4">
@@ -51,19 +53,10 @@ const Navbar = () => {
           </div>
 
           {/* Logo */}
-          <Link
-            href="/"
-            className="flex items-center gap-2 text-xl font-bold"
-          >
-            <Image
-              className="h-8 w-8"
-              src={Logo}
-              alt="FitLog logo"
-            />
+          <Link href="/" className="flex items-center gap-2 text-xl font-bold">
+            <Image className="h-8 w-8" src={Logo} alt="FitLog logo" />
 
-            <span>
-              FIT<span className="text-[#CCFF00]">LOG</span>
-            </span>
+            <span>FITLOG</span>
           </Link>
         </div>
 
@@ -73,7 +66,11 @@ const Navbar = () => {
             <li>
               <Link
                 href="/"
-                className="rounded-full px-5 text-sm font-bold uppercase tracking-wide text-white hover:bg-[#CCFF00] hover:text-black"
+                className={`rounded-full px-5 text-sm font-bold uppercase tracking-wide transition ${
+                  pathname === "/"
+                    ? "bg-[#CCFF00] text-black"
+                    : "text-white hover:bg-[#CCFF00] hover:text-black"
+                }`}
               >
                 Workout
               </Link>
@@ -82,7 +79,11 @@ const Navbar = () => {
             <li>
               <Link
                 href="/my-plan"
-                className="rounded-full px-5 text-sm font-bold uppercase tracking-wide text-white hover:bg-[#CCFF00] hover:text-black"
+                className={`rounded-full px-5 text-sm font-bold uppercase tracking-wide transition ${
+                  pathname === "/my-plan"
+                    ? "bg-[#CCFF00] text-black"
+                    : "text-white hover:bg-[#CCFF00] hover:text-black"
+                }`}
               >
                 My Plan
               </Link>

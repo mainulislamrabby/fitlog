@@ -1,36 +1,208 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# FitLog
 
-## Getting Started
+FitLog is a modern and responsive workout library and planning application built for people who want a simple way to discover workouts, organize their daily training plan, and save exercises for later.
 
-First, run the development server:
+The application provides a dark, focused gym-style interface where users can browse workouts, view detailed exercise information, create a daily plan, track workout statistics, and manage saved workouts.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 Live Project
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**Live Demo:** https://fitlog-tawny-two.vercel.app/
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📦 GitHub Repository
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+**GitHub Repository:** https://github.com/mainulislamrabby/fitlog
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 🛠️ Technologies Used
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Next.js** – React framework for building the application
+- **React** – UI development
+- **TypeScript** – Type-safe development
+- **Tailwind CSS** – Responsive styling
+- **DaisyUI** – UI components
+- **React Icons** – Interface icons
+- **React Toastify** – Toast notifications
+- **REST API** – Workout data
+- **Vercel** – Deployment
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## ✨ Key Features
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 1. Workout Library
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Browse the complete workout library fetched from the API. Each workout card displays:
+
+- Workout image
+- Muscle group/category tags
+- Workout name
+- Equipment
+- Duration
+- Calories burned
+- Rating
+
+Users can click any workout to view its complete details.
+
+### 2. Workout Details
+
+Every workout has a dedicated details page containing:
+
+- Workout image
+- Description
+- Muscle group tags
+- Equipment
+- Difficulty
+- Sets and reps
+- Duration
+- Calories
+- Rating
+- Step-by-step instructions
+
+Users can add the workout to today's plan or save it for later.
+
+### 3. Today's Workout Plan
+
+Users can create a daily workout plan by adding workouts from the library.
+
+- Maximum of **5 workouts** can be added
+- Duplicate workouts cannot be added
+- Plan counter updates automatically
+- Users can remove workouts
+- Users can mark workouts as completed
+- Workout statistics update automatically
+
+### 4. Saved Workouts
+
+Users can save workouts for later and access them from the **Saved** tab.
+
+Saved workouts can also be removed when they are no longer needed.
+
+### 5. Search Workouts
+
+Users can search workout entries by:
+
+- Workout name
+- Muscle group/category
+
+Search functionality is available for the workout library and My Plan entries.
+
+### 6. Sort Workouts
+
+The My Plan list can be sorted using:
+
+- Duration
+- Calories
+- Rating
+
+The default sorting option is Duration.
+
+### 7. Workout Statistics
+
+The My Plan page provides a live summary of:
+
+- Total Exercises
+- Total Minutes
+- Total Calories
+
+The statistics update when workouts are added or removed.
+
+### 8. Persistent Data
+
+Today's Plan and Saved workouts are stored in **localStorage**, allowing the user's workout data to remain available after refreshing or reopening the page.
+
+### 9. Responsive Design
+
+FitLog is designed to work across:
+
+- Mobile devices
+- Tablets
+- Desktop screens
+
+The layout, navigation, workout grid, hero section, and plan cards adapt to different screen sizes.
+
+### 10. Toast Notifications
+
+Users receive toast notifications when performing important actions such as:
+
+- Adding a workout to today's plan
+- Saving a workout
+- Removing a workout
+- Marking a workout as done
+- Attempting to add a duplicate workout
+- Reaching the 5-workout plan limit
+
+---
+
+## 📊 My Plan
+
+The My Plan page contains two tabs:
+
+### Today's Plan
+
+Displays workouts selected for the current day's training session.
+
+Each workout includes:
+
+- Workout thumbnail
+- Workout name
+- Equipment
+- Duration
+- Calories
+- Rating
+- View Details
+- Mark as Done
+- Remove
+
+### Saved
+
+Displays workouts that the user has saved for later.
+
+---
+
+## 🧭 Navigation
+
+The application includes:
+
+- **Workout** – Workout library
+- **My Plan** – Daily plan and saved workouts
+- **Plan Counter** – Shows the number of workouts in today's plan
+- **Saved Counter** – Shows the number of saved workouts
+
+The active navigation item is highlighted.
+
+---
+
+## 📱 Responsive Layout
+
+FitLog follows a responsive design approach:
+
+- **Mobile:** Single-column workout layout with mobile navigation
+- **Tablet:** Two-column workout layout
+- **Desktop:** Three-column workout library layout
+
+---
+
+## ⚠️ Workout Plan Limit
+
+Today's Plan supports a maximum of **5 workouts**.
+
+Once the plan contains five workouts. If the user tries to add another workout, a toast notification informs them:
+
+> "You can only add 5 workouts to today's plan!"
+
+The user can add another workout after removing or marking a workout as done.
+
+---
+
+## 🔔 Error & Loading Handling
+
+The application includes:
+
+- Loading state while workout data is being fetched
+- Custom 404 page for invalid routes
+- Toast notifications for user actions
+- API error handling
+- Empty states when no workouts are available
+
+---

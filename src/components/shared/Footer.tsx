@@ -18,7 +18,7 @@ const Footer = () => {
           />
 
           <span className="text-lg font-black uppercase tracking-wide text-white">
-            FIT<span className="text-[#CCFF00]">LOG</span>
+            FITLOG
           </span>
         </Link>
 
