@@ -10,7 +10,7 @@ const Banner = () => {
           
           {/* Content */}
           <div className="z-10 px-7 py-10 sm:px-10 lg:px-7 xl:px-10">
-            <p className="mb-3 text-[8px] font-bold tracking-[0.15em] text-[#CCFF00] sm:text-[9px]">
+            <p className="mb-3 text-[11px] font-bold tracking-[0.15em] text-[#CCFF00] sm:text-[12px]">
               WORKOUT LIBRARY
             </p>
 
@@ -25,7 +25,7 @@ const Banner = () => {
 
             <a
               href="#library"
-              className="mt-4 inline-flex rounded-[3px] bg-[#CCFF00] px-3 py-1.5 text-[8px] font-bold uppercase text-black transition hover:bg-[#d9ff4d]"
+              className="mt-4 inline-flex rounded-[3px] bg-[#CCFF00] px-3 py-1.5 text-[12px] font-bold uppercase text-black transition hover:bg-[#d9ff4d]"
             >
               Browse Workouts
             </a>
@@ -36,8 +36,8 @@ const Banner = () => {
             <Image
               src={BannerImage}
               alt="FitLog workout"
-              width={500}
-              height={500}
+              width={600}
+              height={600}
               priority
               className="h-47.5 w-auto object-contain sm:h-52.5 lg:mr-8 lg:h-53.75"
             />
